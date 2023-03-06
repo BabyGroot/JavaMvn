@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Random;
 
-public class QuickSort {
+public class Sorting {
     public static void quickSort() {
         Random rand = new Random();
         int[] array = new int[10];
@@ -10,12 +10,37 @@ public class QuickSort {
         for(int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(100);
         }
-
         System.out.println("Array before sort: ");
         printArray(array);
 
         quickSort(array);
 
+        System.out.println("Array after sort: ");
+        printArray(array);
+    }
+
+    public static void bubbleSort () {
+        Random rand = new Random();
+        int[] array = new int[10];
+
+        for(int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(100);
+        }
+        System.out.println("Array before sort: ");
+        printArray(array);
+        boolean swappedSomething = true;
+
+        while (swappedSomething == true) {
+            swappedSomething = false; // reset swapped something
+            for (int i = 0; i < array.length - 1; i++) {
+                    if (array[i] > array[i + 1]) {
+                        int temp = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = temp;
+                        swappedSomething = true;
+                    }
+            }
+        }
         System.out.println("Array after sort: ");
         printArray(array);
     }

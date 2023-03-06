@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +11,8 @@ public class Main {
 //        System.out.println(BinarySearch.binarySearch(ints, 11));
 //        System.out.println(BinarySearch.binarySearch(ints, 23));
 
-//        QuickSort.quickSort();
+          Sorting.bubbleSort();
+//        Sorting.quickSort();
 
 
         // DFS
@@ -50,6 +50,10 @@ public class Main {
 //                        + "(starting from vertex 2)");
 //
 //        g2.BFS(2);
-
+//        HashMap<String,ArrayList<Integer>> map= new HashMap<String, ArrayList<Integer>>();
+//
+//        map.put("key1", new ArrayList<>(Arrays.asList(1, 2, 3)));
+//
+//        System.out.println(map);
     }
 }
